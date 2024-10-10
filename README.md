@@ -1,6 +1,6 @@
 # Pencatatan Murojaah
 
-Ini adalah proyek aplikasi **Murojaah** berbasis PHP yang dirancang untuk membantu pengguna dalam mencatat, mengelola, dan mengedit sesi murojaah (mengulang hafalan Al-Quran). Aplikasi ini memanfaatkan operasi **CRUD** (Create, Read, Update) dan menampilkan data dalam bentuk tabel yang mudah diakses.
+Ini adalah Pencatatan **Murojaah** berbasis PHP yang dirancang untuk membantu pengguna dalam mencatat, mengelola, dan mengedit sesi murojaah (mengulang hafalan Al-Quran). Aplikasi ini memanfaatkan operasi **CRUD** (Create, Read, Update) dan menampilkan data dalam bentuk tabel yang mudah diakses.
 
 
 ## Fitur Utama
