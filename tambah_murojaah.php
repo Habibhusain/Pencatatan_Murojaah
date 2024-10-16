@@ -5,7 +5,7 @@ require "db/db.php";
 
 if(isset($_POST['surah']) && $_POST['surah'] !=''){
 
-    $tanggal=$_POST ['tanggal'];
+    $tanggal=$_POST['tanggal'];
     $juz = $_POST['juz'];
     $surah = $_POST['surah'];
     $ayat = $_POST['ayat'];
