@@ -1,6 +1,6 @@
 <?php
 require "db/db.php";
-
+require "function.php";
 ?>
 
 <!DOCTYPE html>
@@ -42,13 +42,8 @@ require "db/db.php";
             <div class="container">
                 <div class="boxes">
                                  <h3>Murojaah</h3>
-                            <?php
-                    $hitung_data_murojaah="SELECT COUNT(*) FROM murojaah  ";
-                    $hitung_murojaah = $db->query($hitung_data_murojaah);
-                    while($hitung =$hitung_murojaah->fetchArray()):
-                    ?>
-                                <h4>Total Murojaah : <?php echo $hitung[0];?></h4>
-                                <?php endwhile; ?>
+                            
+                                <h4>Total Murojaah : <?php echo get_total_murojaah();?></h4>
                     <table>
                         <thead>
                           
@@ -65,12 +60,11 @@ require "db/db.php";
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            $tampil_murojaah="SELECT * FROM murojaah ORDER BY tanggal DESC ";
-                            $tampil=$db->query($tampil_murojaah);
-                            $no=1;
-                            while($row = $tampil->fetchArray()):
-                            ?>
+                        <?php
+                        $murojaah_list = tampil_murojaah();
+                        $no = 1;
+                        foreach ($murojaah_list as $row):
+                        ?>
                             <tr>
                                 <td><?php echo $no;?></td>
                                 <td><?php echo date ('d-m-Y',strtotime($row['tanggal']));?></td>
@@ -79,11 +73,11 @@ require "db/db.php";
                                 <td><?php echo $row['ayat'];?></td>
                                 <td><?php echo $row['halaman'];?></td>
                                 <td><a href="edit_murojaah.php?id=<?php echo $row['id'];?>">Edit Murojaah</a></td>
-                                <td><a href="hapus_murojaah.php?id=<?php echo $row['id'];?>">Hapus</a></td>
+                                <td><a href="hapus_murojaah.php?id=<?php echo $row['id'];?>" onclick="return confirm('Yakin Mau Menghapus Murojaah ini ???')">Hapus</a></td>
                             </tr>
                             <?php
                             $no++;
-                            endwhile;
+                            endforeach;
                             ?>
                         </tbody>
                     </table>

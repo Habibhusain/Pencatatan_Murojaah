@@ -1,18 +1,10 @@
 <?php
 
 require "db/db.php";
+require "function.php";
 
 $get_id = $_GET['id'];
-function data_murojaah(){
-    global $db;
-    global $get_id;
 
-    $ambil_data_murojaah="SELECT * FROM murojaah WHERE id='$get_id'";
-    $ambil_murojaah = $db->query($ambil_data_murojaah);
-    $ambil = $ambil_murojaah->fetchArray();
-
-    return $ambil;
-}
 
     if(isset($_POST['surah']) && $_POST['surah'] !='')
     {
@@ -22,12 +14,9 @@ function data_murojaah(){
         $get_ayat=$_POST['ayat'];
         $get_halaman=$_POST['halaman'];
 
-        $edit_data_murojaah="UPDATE murojaah SET 
-                            tanggal='$get_tanggal', juz='$get_juz', surah='$get_surah', 
-                            ayat='$get_ayat', halaman='$get_halaman' WHERE id='$get_id'";
-        $edit_murojaah= $db->query($edit_data_murojaah);
+        $update = edit_murojaah($get_id,$get_tanggal,$get_juz,$get_surah,$get_ayat,$get_halaman);
 
-        if(data_murojaah())
+        if($update)
         {
             echo "<script>
                 alert('Data Berhasil di Edit');
@@ -61,17 +50,17 @@ function data_murojaah(){
         </div>
         <div class="container">
             <div class="edited-box">
-            <form action="edit_murojaah.php?id=<?php echo data_murojaah()['id'];?>" method="POST">
+            <form action="edit_murojaah.php?id=<?php echo data_murojaah($get_id)['id'];?>" method="POST">
                     <label for="">Tanggal</label>
-                    <input type="date" name="tanggal" value="<?php echo data_murojaah()['tanggal'];?>" required>
+                    <input type="date" name="tanggal" value="<?php echo data_murojaah($get_id)['tanggal'];?>" required>
                     <label for="">Juz</label>
-                    <input type="number" name="juz" value="<?php echo data_murojaah()['juz'];?>" required>
+                    <input type="number" name="juz" value="<?php echo data_murojaah($get_id)['juz'];?>" required>
                     <label for="">Surah</label>
-                    <input type="text" name="surah" value="<?php echo data_murojaah()['surah'];?>" required>
+                    <input type="text" name="surah" value="<?php echo data_murojaah($get_id)['surah'];?>" required>
                     <label for="">Ayat</label>
-                    <input type="text" name="ayat" value="<?php echo data_murojaah()['ayat'];?>" required>
+                    <input type="text" name="ayat" value="<?php echo data_murojaah($get_id)['ayat'];?>" required>
                     <label for="">Halaman</label>
-                    <input type="text" name="halaman" value="<?php echo data_murojaah()['halaman'];?>" required>
+                    <input type="text" name="halaman" value="<?php echo data_murojaah($get_id)['halaman'];?>" required>
                     <input type="submit" name="submit" value="Edit">
                     <a href="index.php">Kembali</a>
                 </form>

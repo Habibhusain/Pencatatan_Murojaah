@@ -1,10 +1,12 @@
 <?php
 
 require "db/db.php";
+require "function.php"; 
 
 $get_id = $_GET['id'];
-$hapus_murojaah="DELETE FROM murojaah WHERE id ='$get_id'";
-$hapus=$db->query($hapus_murojaah);
+
+$hapus = delete_murojaah($get_id);
+
 if($hapus)
 {
     echo "<script>
