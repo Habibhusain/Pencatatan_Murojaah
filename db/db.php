@@ -1,6 +1,6 @@
 <?php
 
-$db= new SQLite3("murojaah.sqlite");
+$db= new SQLite3("db_murojaah.sqlite");
 if(!$db){
     echo $db->lastErrorMsg();
     exit();

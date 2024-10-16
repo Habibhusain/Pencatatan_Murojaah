@@ -17,7 +17,7 @@ if(isset($_POST['surah']) && $_POST['surah'] !=''){
     {
         echo "<script>
         alert('Data Berhasil di Tambah');
-        window.location='murojaah.php';
+        window.location='index.php';
         </script>";
     }else{
         echo "<script>
@@ -87,7 +87,7 @@ if(isset($_POST['surah']) && $_POST['surah'] !=''){
                     <label for="">Halaman</label>
                     <input type="text" name="halaman" required>
                     <input type="submit" name="submit" value="Tambah">
-                    <a href="murojaah.php">Kembali</a>
+                    <a href="index.php">Kembali</a>
                 </form>
             </div>
         </div>

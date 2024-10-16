@@ -31,12 +31,12 @@ function data_murojaah(){
         {
             echo "<script>
                 alert('Data Berhasil di Edit');
-                window.location='murojaah.php';
+                window.location='index.php';
                 </script>";
         }else{
             echo "<script>
                 alert('Data Gagal di Edit');
-                window.location='murojaah.php';
+                window.location='edit_murojaah.php';
                 </script>";
         }
     }
@@ -73,7 +73,7 @@ function data_murojaah(){
                     <label for="">Halaman</label>
                     <input type="text" name="halaman" value="<?php echo data_murojaah()['halaman'];?>" required>
                     <input type="submit" name="submit" value="Edit">
-                    <a href="murojaah.php">Kembali</a>
+                    <a href="index.php">Kembali</a>
                 </form>
             </div>
         </div>

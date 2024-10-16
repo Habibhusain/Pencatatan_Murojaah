@@ -9,12 +9,12 @@ if($hapus)
 {
     echo "<script>
     alert('Data Berhasil di Hapus');
-    window.location='murojaah.php';
+    window.location='index.php';
     </script>";
 }else{
     echo "<script>
     alert('Data Gagal di Edit');
-    window.location='murojaah.php';
+    window.location='index.php';
     </script>";
 }
 

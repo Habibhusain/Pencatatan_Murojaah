@@ -79,6 +79,7 @@ require "db/db.php";
                                 <td><?php echo $row['ayat'];?></td>
                                 <td><?php echo $row['halaman'];?></td>
                                 <td><a href="edit_murojaah.php?id=<?php echo $row['id'];?>">Edit Murojaah</a></td>
+                                <td><a href="hapus_murojaah.php?id=<?php echo $row['id'];?>">Hapus</a></td>
                             </tr>
                             <?php
                             $no++;
