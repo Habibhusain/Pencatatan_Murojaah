@@ -94,8 +94,8 @@ require "db/db.php";
             <div class="copy-box">
                 <div class="copy-boxes">
                 <h3>Jangan Lupa Tambah Murojaahnya ya!!</h3>
-                <p>Ingat Target mu </p>
-
+                <p>&copy; by: Habib Husain Nurrohim </p>
+                
                 </div>
             </div>
         </footer>
