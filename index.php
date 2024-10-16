@@ -52,7 +52,7 @@ require "db/db.php";
                     <table>
                         <thead>
                           
-                                <th colspan="7"><a href="tambah_murojaah.php">Tambah Murojaah</a></th>
+                                <th colspan="8"><a href="tambah_murojaah.php">Tambah Murojaah</a></th>
                             </tr>
                             <tr>
                                 <th>No</th>
@@ -61,7 +61,7 @@ require "db/db.php";
                                 <th>Surah</th>
                                 <th>Ayat</th>
                                 <th>Halaman</th>
-                                <th colspan="1">Optional</th>
+                                <th colspan="2">Optional</th>
                             </tr>
                         </thead>
                         <tbody>

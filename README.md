@@ -12,7 +12,7 @@ Ini adalah Pencatatan **Murojaah** berbasis PHP yang dirancang untuk membantu pe
 
 ## Struktur Proyek
 - **`murojaah.php`**: Menampilkan daftar murojaah yang tersimpan.
-![Tampilan Murojaah](./css/image/murojaah_tampilan.png)
+![Tampilan Murojaah](./css/screenshot/murojaah_tampilan.png)
 ### Tabel Murojaah
 Tabel ini menampilkan data murojaah yang sudah tersimpan. Setiap baris tabel berisi:
 
@@ -24,7 +24,7 @@ Ayat: Ayat yang diulang.
 Halaman: Halaman di mushaf terkait ayat yang diulang.
 Edit Murojaah: Tombol untuk mengedit data murojaah.
 - **`tambah_murojaah.php`**: Form untuk menambahkan data murojaah baru.
-![Tampilan Murojaah](./css/image/edit.png)
+![Tampilan Murojaah](./css/screenshot/edit.png)
 
 - **`edit_murojaah.php`**: Halaman untuk mengedit data murojaah yang sudah ada.
-![Tampilan Murojaah](./css/image/tambah.png)
+![Tampilan Murojaah](./css/screenshot/tambah.png)
