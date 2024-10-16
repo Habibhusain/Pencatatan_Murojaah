@@ -1,6 +1,7 @@
 <?php
 
 require "db/db.php";
+require "function.php";
 
 
 if(isset($_POST['surah']) && $_POST['surah'] !=''){
@@ -11,8 +12,7 @@ if(isset($_POST['surah']) && $_POST['surah'] !=''){
     $ayat = $_POST['ayat'];
     $halaman = $_POST['halaman'];
 
-    $tambah_data_murojaah="INSERT INTO murojaah (tanggal,juz,surah,ayat,halaman) VALUES ('$tanggal','$juz','$surah','$ayat','$halaman')";
-    $tambah_murojaah= $db->query($tambah_data_murojaah);
+    $tambah_murojaah= tambah_murojaah($tanggal, $juz, $surah, $ayat, $halaman);
     if($tambah_murojaah)
     {
         echo "<script>

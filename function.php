@@ -48,6 +48,16 @@ function tampil_murojaah() {
     return $murojaah_list;
 }
 
+function tambah_murojaah($tanggal, $juz, $surah, $ayat, $halaman)
+{
+    $db = database();
+
+    $tambah_data_murojaah="INSERT INTO murojaah (tanggal,juz,surah,ayat,halaman) VALUES ('$tanggal','$juz','$surah','$ayat','$halaman')";
+    $tambah_murojaah= $db->query($tambah_data_murojaah);
+    
+    return $tambah_murojaah;
+
+}
 function data_murojaah($get_id)
 {
     $db= database();
