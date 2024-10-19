@@ -1,6 +1,6 @@
 <?php
 require "db/db.php";
-require "function.php";
+require "functions.php";
 ?>
 
 <!DOCTYPE html>
