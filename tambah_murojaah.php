@@ -1,7 +1,7 @@
 <?php
 
 require "db/db.php";
-require "function.php";
+require "functions.php";
 
 
 if(isset($_POST['surah']) && $_POST['surah'] !=''){

@@ -1,7 +1,7 @@
 <?php
 
 require "db/db.php";
-require "function.php";
+require "functions.php";
 
 $get_id = $_GET['id'];
 
