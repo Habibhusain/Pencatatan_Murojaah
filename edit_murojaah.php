@@ -1,13 +1,11 @@
 <?php
-
 require "db/db.php";
 require "functions.php";
 
 $get_id = $_GET['id'];
 
+    if (isset($_POST['surah']) && $_POST['surah'] !='') {
 
-    if(isset($_POST['surah']) && $_POST['surah'] !='')
-    {
         $get_tanggal=$_POST['tanggal'];
         $get_juz=$_POST['juz'];
         $get_surah=$_POST['surah'];
@@ -16,22 +14,18 @@ $get_id = $_GET['id'];
 
         $update = edit_murojaah($get_id,$get_tanggal,$get_juz,$get_surah,$get_ayat,$get_halaman);
 
-        if($update)
-        {
+        if( $update) {
             echo "<script>
                 alert('Data Berhasil di Edit');
                 window.location='index.php';
                 </script>";
-        }else{
+        } else {
             echo "<script>
                 alert('Data Gagal di Edit');
                 window.location='edit_murojaah.php';
                 </script>";
         }
     }
-
-
-
 ?>
 
 

@@ -1,10 +1,9 @@
 <?php
-
 require "db/db.php";
 require "functions.php";
 
 
-if(isset($_POST['surah']) && $_POST['surah'] !=''){
+if (isset($_POST['surah']) && $_POST['surah'] !='') {
 
     $tanggal=$_POST['tanggal'];
     $juz = $_POST['juz'];
@@ -13,13 +12,12 @@ if(isset($_POST['surah']) && $_POST['surah'] !=''){
     $halaman = $_POST['halaman'];
 
     $tambah_murojaah= tambah_murojaah($tanggal, $juz, $surah, $ayat, $halaman);
-    if($tambah_murojaah)
-    {
+    if ($tambah_murojaah) {
         echo "<script>
         alert('Data Berhasil di Tambah');
         window.location='index.php';
         </script>";
-    }else{
+    } else {
         echo "<script>
         alert('Data Gagal di Tambah');
         window.location='tambah_murojaah.php';
